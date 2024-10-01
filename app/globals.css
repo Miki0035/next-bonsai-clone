@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: Amerigo;
+  src: url("../assets/fonts/amerigo-bt-roman-font/amerigo-bt.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: ProximaBold;
+  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-Bold.otf");
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: ProximaRegular;
+  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-Regular.otf");
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: ProximaSemiBold;
+  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-SemiBold.otf");
 }
