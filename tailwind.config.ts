@@ -22,7 +22,7 @@ const config: Config = {
         regular: ["ProximaRegular", "sans-serif"],
         bold: ["ProximaBold", "sans-serif"],
         semibold: ["ProximaSemiBold", "sans-serif"],
-        "amerigo-bold": ["Amerigo", "ProximaRegular", "sans-serif"],
+        amerigo: ["Amerigo", "ProximaRegular", "sans-serif"],
         sans: ["regular", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
     },
