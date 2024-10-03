@@ -21,7 +21,9 @@ const MobileNav = () => {
       {/****** Mobile absolute overlay navigation ******/}
       <div
         className={` ${
-          isShowing ? "block" : "hidden"
+          isShowing
+            ? "visible transition-opacity ease-in-out delay-100 opacity-100"
+            : "invisible opacity-0"
         }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground`}
       >
         <div className="w-full h-full flex flex-col gap-32 px-12 py-8 ">
