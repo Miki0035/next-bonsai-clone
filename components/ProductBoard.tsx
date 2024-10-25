@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import rightChevron from "@/assets/images/path-chevron.svg";
@@ -5,29 +6,36 @@ import { gridCardContent, productCardContent } from "@/constants";
 import GridCard from "./GridCard";
 import ProductCard from "./ProductCard";
 
-const NavBoard = () => {
-  const [isHovered, setisHovered] = useState(false);
+const ProductBoard = () => {
+  const [isShowContainer, setIsShowContainer] = useState(false);
+  const [isShowGrid, setIsShowGrid] = useState(false);
 
   return (
     <div
       className={`${
-        isHovered ? "w-[980px]" : "w-[350px]"
+        isShowContainer ? "w-[980px]" : "w-[350px]"
       } h-[500px]  hidden group-hover:flex absolute top-6 z-50 -left-20 bg-white`}
     >
       {/** Hover Card first Col Container */}
       <div
-        className={` w-[350px] h-full p-9 hover:cursor-pointer shadow-lg  flex flex-col justify-start gap-5 `}
+        className={`w-[350px] h-full hover:cursor-pointer shadow-lg  flex flex-col justify-start gap-0 `}
       >
         {/** First Product */}
         <div
-          onMouseEnter={() => setisHovered(true)}
-          className="w-full h-full flex flex-col items-start gap-2 pb-5 border-b-2 border-textColor"
+          onMouseEnter={() => {
+            setIsShowContainer(true);
+            setIsShowGrid(true);
+          }}
+          onMouseLeave={() => {
+            setIsShowGrid(false);
+          }}
+          className="w-full h-1/3 flex flex-col items-start p-9 gap-0 hover:bg-gray-100"
         >
-          <h1 className="text-2xl text-darkTextColor font-amerigo">
+          <h1 className="text-2xl text-darkTextColor font-amerigo mb-2">
             Bonsai Workflow
           </h1>
-          <div className="w-full flex gap-1">
-            <p className="w-[260px] text-textColor text-md">
+          <div className="w-[300px] flex gap-1 border-b-2 border-textColor  pb-4">
+            <p className="w-full text-textColor text-md">
               Look professional, win more clients and manage your business from
               one place
             </p>
@@ -37,7 +45,7 @@ const NavBoard = () => {
               height={18}
               alt="right arrow"
               className={`${
-                isHovered
+                isShowContainer
                   ? "visible transition-opacity opacity-100 delay-150 "
                   : "invisible opacity-0 "
               } -rotate-90`}
@@ -50,18 +58,22 @@ const NavBoard = () => {
             key={id}
             title={title}
             description={description}
-            noHover={() => setisHovered(false)}
+            showGrid={() => {
+              setIsShowGrid(false);
+              setIsShowContainer(false);
+            }}
           />
         ))}
       </div>
       {/** Hover Card Grid Container */}
       <div
         className={`${
-          isHovered
+          isShowGrid
             ? "w-2/3 h-full visible transition-opacity opacity-100 delay-450 ease-in-out"
             : "invisible opacity-0"
         }  shadow-md hover:visible  p-3`}
-        onMouseEnter={() => setisHovered(true)}
+        onMouseEnter={() => setIsShowGrid(true)}
+        onMouseLeave={() => setIsShowGrid(false)}
       >
         <div className={`grid grid-cols-2 h-full `}>
           {gridCardContent.map(({ id, title, description, image }) => (
@@ -78,4 +90,4 @@ const NavBoard = () => {
   );
 };
 
-export default NavBoard;
+export default ProductBoard;

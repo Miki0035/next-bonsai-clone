@@ -1,18 +1,18 @@
-"use client";
 import Image from "next/image";
-import React from "react";
 import logo from "@/assets/images/bonsai-logo.svg";
-
 import chevron from "@/assets/images/down-chevron.svg";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
-import NavBoard from "./NavBoard";
+
+import ProductBoard from "./ProductBoard";
+import TemplateBoard from "./TemplateBoard";
+
 const Navbar = () => {
   return (
     <nav className="w-full flex justify-between items-center px-5 py-5">
       {/****** Logo ******/}
       <div className="flex w-1/2 lg:w-96  items-center justify-center">
-        <Image  src={logo} width={150} height={150} alt="bonsai logo" />
+        <Image src={logo} width={150} height={150} alt="bonsai logo" />
       </div>
       <MobileNav />
       {/****** Large Screen Nav Menu ******/}
@@ -23,13 +23,14 @@ const Navbar = () => {
               Product
               <Image src={chevron} width={12} height={12} alt="down arrow" />
             </Link>
-            <NavBoard />
+            <ProductBoard />
           </li>
-          <li className="w-24 text-md">
+          <li className="group/template w-24 text-md relative">
             <Link href={"#"} className="flex gap-4">
               Tempaltes
               <Image src={chevron} width={12} height={12} alt="down arrow" />
             </Link>
+            <TemplateBoard />
           </li>
           <li className="w-16 text-md">
             <Link href={"#"} className="flex">

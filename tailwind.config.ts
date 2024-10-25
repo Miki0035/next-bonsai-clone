@@ -10,8 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         textColor: "#4c4d5f",
         darkTextColor: "#0d0d14",
         greenBackground: "#00b289",
