@@ -26,10 +26,10 @@ const TemplateBoard = () => {
   };
   return (
     <div
-      className={` w-[700px] h-[550px]  hidden group-hover/template:flex absolute top-6 z-50 -left-10 bg-white shadow-lg`}
+      className={` w-[750px] h-[550px]  hidden group-hover/template:flex absolute top-6 z-50 -left-10 bg-white shadow-lg`}
     >
       <div className="w-full grid grid-cols-3 h-full gap-5">
-        <div className="w-full h-full col-span-1 pt-5 px-0 flex flex-col items-center">
+        <div className="w-full h-full col-span-1 pt-5  flex flex-col items-center">
           {gridTemplateCards.map(({ id, title, img }) => (
             <TemplateTypes
               key={id}

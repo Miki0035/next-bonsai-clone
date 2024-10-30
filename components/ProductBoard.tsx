@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import rightChevron from "@/assets/images/path-chevron.svg";
+import rightChevron from "../assets/images/path-chevron.svg";
 import { gridCardContent, productCardContent } from "@/constants";
 import GridCard from "./GridCard";
 import ProductCard from "./ProductCard";
@@ -9,7 +9,6 @@ import ProductCard from "./ProductCard";
 const ProductBoard = () => {
   const [isShowContainer, setIsShowContainer] = useState(false);
   const [isShowGrid, setIsShowGrid] = useState(false);
-
   return (
     <div
       className={`${
@@ -29,12 +28,12 @@ const ProductBoard = () => {
           onMouseLeave={() => {
             setIsShowGrid(false);
           }}
-          className="w-full h-1/3 flex flex-col items-start p-9 gap-0 hover:bg-gray-100"
+          className="w-full h-1/3 flex flex-col items-start p-9 hover:bg-gray-50"
         >
-          <h1 className="text-2xl text-darkTextColor font-amerigo mb-2">
+          <h1 className="text-2xl text-darkTextColor font-oswald mb-2">
             Bonsai Workflow
           </h1>
-          <div className="w-[300px] flex gap-1 border-b-2 border-textColor  pb-4">
+          <div className="w-[300px] flex gap-1">
             <p className="w-full text-textColor text-md">
               Look professional, win more clients and manage your business from
               one place
@@ -51,6 +50,7 @@ const ProductBoard = () => {
               } -rotate-90`}
             />
           </div>
+          <hr className="w-full mt-4 "/>
         </div>
         {/** Second Product */}
         {productCardContent.map(({ id, title, description }) => (

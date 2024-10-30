@@ -9,7 +9,7 @@ const TemplateDescription: React.FC<TemplateDescriptionType> = ({
 }) => {
   return (
     <div className="w-full flex flex-col">
-      <h3 className="mb-4 self-start text-lg font-regular">Featured {title}</h3>
+      <h3 className="mb-4 self-start text-2xl font-oswald">Featured {title}</h3>
       <div className="w-[350px] flex flex-col items-center gap-5">
         {descriptions.map((desc, index) => (
           <div

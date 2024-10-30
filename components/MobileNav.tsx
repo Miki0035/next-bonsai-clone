@@ -4,9 +4,16 @@ import mobileLogo from "@/assets/images/mobile_logo.svg";
 import { IoClose, IoMenu } from "react-icons/io5";
 import chevron from "@/assets/images/down-chevron.svg";
 import Image from "next/image";
+import Link from "next/link";
+import { gridTemplateCards, MobileNavProductBoardItems } from "@/constants";
+import MobileProductBoard from "./MobileProductBoard";
+import MobileTemplateBoard from "./MobileTemplateBoard";
 
 const MobileNav = () => {
   const [isShowing, setIsShowing] = useState(false);
+
+  const [isShowProduct, setIsShowProduct] = useState(false);
+  const [isShowTemplate, setIsShowTemplate] = useState(false);
 
   return (
     <>
@@ -24,7 +31,7 @@ const MobileNav = () => {
           isShowing
             ? "visible transition-opacity ease-in-out delay-100 opacity-100"
             : "invisible opacity-0"
-        }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground`}
+        }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground lg:hidden`}
       >
         <div className="w-full h-full flex flex-col gap-32 px-12 py-8 ">
           {/****** Mobile overlay navigation nav bar******/}
@@ -42,17 +49,81 @@ const MobileNav = () => {
             </div>
           </div>
           {/****** Mobile overlay navigation lower body container ******/}
-          <div className="w-full h-full flex flex-col items-start">
+          <div className="relative w-full h-full flex flex-col items-start">
             {/****** Mobile overlay navigation lower body navs******/}
 
             <div className="w-full flex flex-col items-start gap-5 mb-12">
-              <div className="w-full flex justify-between border-b-2 pb-5 text-textColor">
-                <p className="md:text-lg">Product</p>
-                <Image src={chevron} width={10} height={10} alt="down arrow" />
+              <div className="w-full flex flex-col">
+                <div
+                  className="w-full flex justify-between pb-5 text-textColor cursor-pointer"
+                  onClick={() => setIsShowProduct(!isShowProduct)}
+                >
+                  <Link href={"#"} className="md:text-lg">
+                    Product
+                  </Link>
+                  <Image
+                    src={chevron}
+                    width={10}
+                    height={10}
+                    alt="down arrow"
+                  />
+
+                  {/* Mobile Product Board */}
+                  <div
+                    className={`${
+                      isShowProduct
+                        ? "visible opacity-100"
+                        : "invisible opacity-0"
+                    } bg-white z-10  transition-opacity  absolute -top-12 left-0 w-full h-full`}
+                  >
+                    <div className="w-full h-full flex flex-col gap-5 px-5 py-8">
+                      {MobileNavProductBoardItems.map(
+                        ({ title, subtitle, id }) => (
+                          <MobileProductBoard
+                            key={id}
+                            title={title}
+                            subtitle={subtitle}
+                          />
+                        )
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <hr className="w-full " />
               </div>
-              <div className="w-full flex justify-between border-b-2 pb-5 text-textColor">
-                <p className="md:text-lg">Templates</p>
-                <Image src={chevron} width={10} height={10} alt="down arrow" />
+              <div className="w-full flex flex-col">
+                <div
+                  className="w-full flex justify-between  pb-5 text-textColor"
+                  onClick={() => setIsShowTemplate(!isShowTemplate)}
+                >
+                  <p className="md:text-lg">Templates</p>
+                  <Image
+                    src={chevron}
+                    width={10}
+                    height={10}
+                    alt="down arrow"
+                  />
+
+                  {/* Mobile Template Board */}
+                  <div
+                    className={`${
+                      isShowTemplate
+                        ? "visible opacity-100"
+                        : "invisible opacity-0"
+                    } bg-white z-10  transition-opacity  absolute -top-12 left-0 w-full h-full`}
+                  >
+                    <div className="w-full h-full flex flex-col gap-1 px-5 py-8 ">
+                      {gridTemplateCards.map(({ title, img, id }) => (
+                        <MobileTemplateBoard
+                          key={id}
+                          title={title}
+                          image={img}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <hr className="w-full " />
               </div>
               <div className="w-full flex justify-between border-b-2 pb-5 text-textColor">
                 <p className="md:text-lg">Pricing</p>

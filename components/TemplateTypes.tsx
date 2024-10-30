@@ -7,7 +7,7 @@ const TemplateTypes: React.FC<TemplateTypeProps> = ({ title, img , findTemplateD
   return (
     <div className="w-full h-[60px]">
       <div
-        className="flex items-center justify-center w-72 py-5 px-2 cursor-pointer hover:bg-gray-100"
+        className="flex items-center justify-center w-64 py-5 px-2 cursor-pointer hover:bg-gray-100"
         onMouseEnter={() => {
           setShowChevron(true);
           findTemplateDescription(id)
@@ -16,7 +16,7 @@ const TemplateTypes: React.FC<TemplateTypeProps> = ({ title, img , findTemplateD
       >
         <div className="w-full flex gap-3">
           <Image src={img} width={20} height={20} alt="template image" />
-          <p className="text-textColor text-sm">{title}</p>
+          <p className="text-textColor font-oswald text-md">{title}</p>
         </div>
         <div
           className={`${
@@ -27,8 +27,8 @@ const TemplateTypes: React.FC<TemplateTypeProps> = ({ title, img , findTemplateD
         >
           <Image
             src={rightChevron}
-            width={30}
-            height={30}
+            width={20}
+            height={20}
             alt="right arrow"
             className="-rotate-90"
           />

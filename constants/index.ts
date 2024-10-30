@@ -198,3 +198,22 @@ export const gridTemplateDescriptions: TemplateDescriptionType[] = [
     link: "",
   },
 ];
+
+
+export const MobileNavProductBoardItems = [
+  {
+    id : 0,
+    title: "Bonsai Workflow",
+    subtitle: "Organize your business & look professional"
+  },
+  {
+    id : 1,
+    title: "Bonsai Tax",
+    subtitle: "Maximize write-offs, and estimate and save for 1099 taxes"
+  },
+  {
+    id : 2,
+    title: "Bonsai Cash",
+    subtitle: "Manage your money with a no-fee business account"
+  },
+]

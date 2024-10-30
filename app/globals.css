@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Amerigo;
-  src: url("../assets/fonts/amerigo-bt-roman-font/amerigo-bt.ttf");
+  font-family: Oswald;
+  src: url("../assets/fonts/Oswald/static/Oswald-Regular.ttf");
 }
 
 @font-face {
-  font-family: ProximaBold;
-  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-Bold.otf");
+  font-family: OpenSansBold;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans-Bold.ttf");
 }
 
 @font-face {
-  font-family: ProximaRegular;
-  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-Regular.otf");
+  font-family: OpenSansRegular;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans-Regular.ttf");
 }
 
 @font-face {
-  font-family: ProximaSemiBold;
-  src: url("../assets/fonts/Proxima-Nova-Font-Family/Proxima-Nova-SemiBold.otf");
+  font-family: OpenSansSemiBold;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans-SemiBold.ttf");
 }
 
 :root {
