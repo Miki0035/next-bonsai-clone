@@ -199,21 +199,77 @@ export const gridTemplateDescriptions: TemplateDescriptionType[] = [
   },
 ];
 
-
 export const MobileNavProductBoardItems = [
   {
-    id : 0,
+    id: 0,
     title: "Bonsai Workflow",
-    subtitle: "Organize your business & look professional"
+    subtitle: "Organize your business & look professional",
   },
   {
-    id : 1,
+    id: 1,
     title: "Bonsai Tax",
-    subtitle: "Maximize write-offs, and estimate and save for 1099 taxes"
+    subtitle: "Maximize write-offs, and estimate and save for 1099 taxes",
   },
   {
-    id : 2,
+    id: 2,
     title: "Bonsai Cash",
-    subtitle: "Manage your money with a no-fee business account"
+    subtitle: "Manage your money with a no-fee business account",
   },
-]
+];
+
+export const priceCards = [
+  {
+    id: 0,
+    title: "Starter",
+    subtitle: "Ideal for freelancers and contractors just starting out.",
+    monthlyPrice: 24,
+    yearlyPrice: 17,
+    descriptions: [
+      "All Templates",
+      "Unlimited Clients & Projects",
+      "Invoicing & Payments",
+      "Proposals & Contracts",
+      "Tasks & Time Tracking",
+      "Client CRM",
+      "Expense Tracking",
+      "Up to 5 Project Collaborators",
+    ],
+  },
+  {
+    id: 1,
+    title: "Professional",
+    subtitle: "Everything a growing independent business needs to thrive.",
+    monthlyPrice: 39,
+    yearlyPrice: 32,
+    descriptions: [
+      "Everything in Starter plus...",
+      "Custom Branding",
+      "Forms & Questionnaires",
+      "Workflow Automations",
+      "Client Portal",
+      "QuickBooks Integration",
+      "Calendly Integration",
+      "Zapier Integration",
+      "Up to 15 Project Collaborators",
+    ],
+  },
+  {
+    id: 2,
+    title: "Business",
+    subtitle: "The perfect package for small businesses and agencies",
+    monthlyPrice: 52,
+    yearlyPrice: 17,
+    descriptions: [
+      "Everything in Starter and Professional plus...",
+      "Subcontractor Management",
+      "Hiring Agreement Templates(1099 contracts)",
+      "Subcontractor Onboarding",
+      "Talent Pool",
+      "3 Team Seats (additional seats $9/month)",
+      "Accountant Access",
+      "Connect Multiple Bank Accounts",
+      "Unlimited Subcontractors",
+      "Unlimited Project Collaborators",
+    ],
+  },
+];

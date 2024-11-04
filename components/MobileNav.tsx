@@ -18,7 +18,7 @@ const MobileNav = () => {
   return (
     <>
       {/****** Mobile Nav Menu ******/}
-      <div className="flex justify-start w-24 mx-2 lg:hidden">
+      <div className="flex justify-end md:justify-start w-24 mx-2 lg:hidden">
         {!isShowing && (
           <button onClick={() => setIsShowing(!isShowing)}>
             <IoMenu size={45} />
@@ -31,7 +31,7 @@ const MobileNav = () => {
           isShowing
             ? "visible transition-opacity ease-in-out delay-100 opacity-100"
             : "invisible opacity-0"
-        }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground lg:hidden`}
+        }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground lg:hidden z-50`}
       >
         <div className="w-full h-full flex flex-col gap-32 px-12 py-8 ">
           {/****** Mobile overlay navigation nav bar******/}
@@ -74,7 +74,7 @@ const MobileNav = () => {
                       isShowProduct
                         ? "visible opacity-100"
                         : "invisible opacity-0"
-                    } bg-white z-10  transition-opacity  absolute -top-12 left-0 w-full h-full`}
+                    } bg-white z-50  transition-opacity  absolute -top-12 left-0 w-full h-full`}
                   >
                     <div className="w-full h-full flex flex-col gap-5 px-5 py-8">
                       {MobileNavProductBoardItems.map(
@@ -110,7 +110,7 @@ const MobileNav = () => {
                       isShowTemplate
                         ? "visible opacity-100"
                         : "invisible opacity-0"
-                    } bg-white z-10  transition-opacity  absolute -top-12 left-0 w-full h-full`}
+                    } bg-white z-50  transition-opacity  absolute -top-12 left-0 w-full h-full`}
                   >
                     <div className="w-full h-full flex flex-col gap-1 px-5 py-8 ">
                       {gridTemplateCards.map(({ title, img, id }) => (

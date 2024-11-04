@@ -13,7 +13,7 @@ const ProductBoard = () => {
     <div
       className={`${
         isShowContainer ? "w-[980px]" : "w-[350px]"
-      } h-[500px]  hidden group-hover:flex absolute top-6 z-50 -left-20 bg-white`}
+      } h-[500px]  hidden group-hover:flex absolute top-6 -left-20 bg-white`}
     >
       {/** Hover Card first Col Container */}
       <div

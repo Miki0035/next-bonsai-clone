@@ -9,7 +9,7 @@ import TemplateBoard from "./TemplateBoard";
 
 const Navbar = () => {
   return (
-    <header className="relative lg:top-0 lg:sticky  w-full px-2 py-4 bg-whiteBackground">
+    <header className="relative lg:top-0 lg:sticky  w-full px-2 py-4 bg-whiteBackground z-50">
       <nav className="w-full flex justify-between items-center px-5 py-5">
         {/****** Logo ******/}
         <div className="flex w-1/2 lg:w-96  items-center justify-center lg:justify-end">

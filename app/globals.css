@@ -32,7 +32,7 @@
 
 .container-0 {
   background: linear-gradient(90deg, #fffde7 40%, transparent 40%),
-              linear-gradient(-90deg, #e3f2fd 40%, transparent 20%);
+    linear-gradient(-90deg, #e3f2fd 40%, transparent 20%);
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: 100px 100px;
@@ -40,10 +40,9 @@
   background-size: 100px 100px;
 }
 
-
 .container-1 {
   background: linear-gradient(135deg, #fffde7 40%, transparent 40%),
-              linear-gradient(225deg, #e3f2fd 40%, transparent 20%);
+    linear-gradient(225deg, #e3f2fd 40%, transparent 20%);
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: 100px 100px;
@@ -51,10 +50,9 @@
   background-size: 100px 100px;
 }
 
-
 .container-2 {
   background: linear-gradient(160deg, #fffde7 40%, transparent 40%),
-              linear-gradient(330deg, #e3f2fd 40%, transparent 20%);
+    linear-gradient(330deg, #e3f2fd 40%, transparent 20%);
   background-repeat: no-repeat;
   background-position: bottom left, top right;
   background-size: 100px 100px;
@@ -64,10 +62,14 @@
 
 .container-3 {
   background: linear-gradient(135deg, #fffde7 40%, transparent 40%),
-              linear-gradient(225deg, #e3f2fd 40%, transparent 20%);
+    linear-gradient(225deg, #e3f2fd 40%, transparent 20%);
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: 100px 100px;
   border: 1px solid #e0e0e0;
   background-size: 100px 100px;
+}
+
+.angled-background {
+  background: linear-gradient(250deg, #e8f4fc 50%, white 50%);
 }
