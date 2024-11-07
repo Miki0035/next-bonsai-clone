@@ -1,6 +1,7 @@
 import React from "react";
 import rightTick from "@/assets/images/green-tick.svg";
 import Image from "next/image";
+import { useStateContext } from "@/provider/StateContext";
 
 const PriceCard = ({
   title,
@@ -8,17 +9,16 @@ const PriceCard = ({
   subtitle,
   monthlyPrice,
   yearlyPrice,
-  isChecked,
   descriptions,
 }: {
   title: string;
   subtitle: string;
   id: number;
-  isChecked: boolean;
   monthlyPrice: number;
   yearlyPrice: number;
   descriptions: string[];
 }) => {
+  const { isChecked} = useStateContext();
   return (
     <div className="w-full h-full bg-white flex flex-col shadow-xl py-10 px-4 sm:w-[500px] lg:w-[380px] relative ">
       {id === 1 && (

@@ -1,19 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import text from "@/assets/images/FREE-text.svg";
 import { priceCards } from "@/constants";
 import PriceCard from "./PriceCard";
+import { useStateContext } from "@/provider/StateContext";
 
 const PlanPricing = () => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
-  };
+  const { isChecked, setIsChecked } = useStateContext();
 
   return (
-    <div className="w-full h-full py-24 flex flex-col flex-warp justify-center items-end gap-7">
+    <section className="w-full h-full py-24 flex flex-col flex-warp justify-center items-end gap-7">
       {/* plans price & toggle container */}
       <div className="w-full  h-full flex justify-center gap-14 md:gap-5">
         <div className="w-24 md:w-72 h-full">
@@ -31,7 +28,7 @@ const PlanPricing = () => {
           />
           <div
             className="w-full flex justify-center gap-2 md:gap-4 cursor-pointer"
-            onClick={handleToggle}
+            onClick={() => setIsChecked(!isChecked)}
           >
             <span
               className={`uppercase font-regular text-sm ${
@@ -58,11 +55,11 @@ const PlanPricing = () => {
         </div>
       </div>
       <div className="w-full h-full grid grid-cols-1 place-items-center gap-8 px-2 lg:grid-cols-3 my-5 lg:gap-0">
-        {
-          priceCards.map((price) => <PriceCard isChecked={isChecked} key={price.id}  {...price}/>)
-        }
+        {priceCards.map((price) => (
+          <PriceCard key={price.id} {...price} />
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

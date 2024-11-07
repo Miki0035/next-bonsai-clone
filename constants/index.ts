@@ -273,3 +273,58 @@ export const priceCards = [
     ],
   },
 ];
+
+export const addonsText = {
+  monthly: [
+    {
+      id: 0,
+      title: "Collaborators",
+      subtitle:
+        "Invite other users to specific projects for limited access and functionality.",
+      monthly: 0,
+      link: "",
+    },
+    {
+      id: 1,
+      title: "Partners",
+      subtitle:
+        "Invite other users for full account access and company management.",
+      monthly: 9,
+      link: "",
+    },
+    {
+      id: 2,
+      title: "Bonsai Tax",
+      subtitle:
+        "Track expenses, identify write-offs, and estimate quarterly taxes easily.",
+      monthly: 10,
+      link: "LEARN MORE",
+    },
+  ],
+  yearly: [
+    {
+      id: 0,
+      title: "Accounting & Tax Assistant",
+      subtitle:
+        "Manage your freelance finances and always be ready for tax season with easy-to-use accounting and tax tools.",
+      yearly: 100,
+      link: "LEARN MORE",
+    },
+    {
+      id: 1,
+      title: "Partners",
+      subtitle:
+        "Invite other users for full account access and company management.",
+      yearly: 90,
+      link: "",
+    },
+    {
+      id: 3,
+      title: "Collaborators",
+      subtitle:
+        "Invite other users to specific projects for limited access and functionality.",
+      yearly: 0,
+      link: "",
+    },
+  ],
+};

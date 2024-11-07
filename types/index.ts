@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type GridCardProps = {
   title: string;
   image: string;
@@ -23,3 +25,9 @@ export type TemplateDescriptionType =  {
     descriptions: string [],
     link: string | "",
   }
+
+
+export type ContextTypeProps = {
+  isChecked: boolean;
+  setIsChecked: Dispatch<SetStateAction<boolean>>;
+}
