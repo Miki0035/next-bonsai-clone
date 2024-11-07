@@ -1,4 +1,4 @@
-import { TemplateDescriptionType } from "@/types";
+import { FooterContentType, TemplateDescriptionType } from "@/types";
 
 export const gridCardContent = [
   {
@@ -327,4 +327,293 @@ export const addonsText = {
       link: "",
     },
   ],
+};
+
+//Accoridion Text
+export const frequentAskedQuestion = [
+  {
+    id: 0,
+    heading: "How does the free trial work",
+    answer: `When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's Workflow or Workflow Plus Features! You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the subscription ends! If you wish to cancel at any time during the trial period, you can do so through your Subscriptions Settings Page.`,
+  },
+  {
+    id: 1,
+    heading: "Can I change plans anytime",
+    answer: `Yes, you can from within your account. If you have already subscribed to a plan, or want to downgrade or upgrade your current one, you can do this by going to your "Settings" and "Subscription".`,
+  },
+  {
+    id: 2,
+    heading: "How do I pause my Bonsai subscription",
+    answer: `We totally understand that with the nature of freelancing, work ebbs and flows so you might not always need your Bonsai subscription to remain active! The good news is that you can cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll be able to continue logging in to access all your documents and even continue to use our free features, like Time Tracking! In order to cancel your subscription, login to your Bonsai account.`,
+  },
+  {
+    id: 3,
+    heading: "What is your refund policy",
+    answer: `If you contact us within 2 weeks of being charged for your subscription, we will be happy to issue a refund for you!Beyond those 2 weeks, you will need to cancel or modify the subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.`,
+  },
+];
+
+// Footer Text
+export const footerContent: FooterContentType = {
+  product: {
+    title: "Product",
+    links: [
+      {
+        id: 0,
+        link: "Proposals",
+        sublink: [],
+      },
+      {
+        id: 1,
+        link: "Contracts",
+        sublink: [],
+      },
+      {
+        id: 2,
+        link: "Invoicing",
+        sublink: [],
+      },
+      {
+        id: 3,
+        link: "Client CRM",
+        sublink: [],
+      },
+      {
+        id: 4,
+        link: "Time Tracking",
+        sublink: [],
+      },
+      {
+        id: 5,
+        link: "Task Tracking",
+        sublink: [],
+      },
+      {
+        id: 6,
+        link: "Forms",
+        sublink: [],
+      },
+      {
+        id: 7,
+        link: "Accounting",
+        sublink: [],
+      },
+      {
+        id: 8,
+        link: "Bonsai Tax",
+        sublink: [],
+      },
+      {
+        id: 9,
+        link: "Bonsai Cash",
+        sublink: [],
+      },
+    ],
+  },
+  pricing: {
+    title: "Pricing",
+    links: [
+      {
+        id: 0,
+        link: "Bonsai Reviews",
+        sublink: [],
+      },
+    ],
+  },
+  freeResource: {
+    title: "Free Resource",
+    links: [
+      {
+        id: 0,
+        link: "Freelance Resources",
+        sublink: [],
+      },
+      {
+        id: 1,
+        link: "Freelance Blog by Bonsai",
+        sublink: [],
+      },
+      {
+        id: 2,
+        link: "How to Write a Contract",
+        sublink: [],
+      },
+      {
+        id: 3,
+        link: "Online Signature Maker",
+        sublink: [],
+      },
+      {
+        id: 4,
+        link: "Self-Employed Taxes Hub",
+        sublink: [],
+      },
+      {
+        id: 5,
+        link: "Self-Employed Taxes Calculator",
+        sublink: [],
+      },
+      {
+        id: 6,
+        link: "Self-Employed Taxes Deductions",
+        sublink: [],
+      },
+    ],
+  },
+  templates: {
+    title: "Templates",
+    links: [
+      {
+        id: 0,
+        link: "Invoice Templates",
+        sublink: [
+          "Invoice Generator",
+          "Blank Invoice Template",
+          "Consultant Invoice Template",
+          "Editable Invoice Template",
+          "Graphic Design Invoice",
+          "Web Design Invoice",
+          "Contractor Invoice Template",
+          "Photography Invoice Template",
+          "Self Employed Invoice Template",
+        ],
+      },
+      {
+        id: 1,
+        link: "Proposal Templates",
+        sublink: [
+          "Website Proposal Template",
+          "Digital Marketing Proposal Template",
+          "Social Media Marketing Proposal",
+          "Graphic Design Proposal",
+          "Freelance Proposal Template",
+          "SEO Proposal Template",
+        ],
+      },
+      {
+        id: 2,
+        link: "Contract Templates",
+        sublink: [
+          "Online Contract",
+          "Graphic Design Contract",
+          "Freelance Contract Template",
+          "Social Media Marketing Contract",
+          "Software Development Contract",
+          "Web Design  Contract",
+          "Video Production Contract",
+          "Public Relations Contract",
+          "Translation Contract",
+        ],
+      },
+      {
+        id: 3,
+        link: "Agreement Templates",
+        sublink: [
+          "Retainer Agreement Templates",
+          "Influencer Agreement Templates",
+          "Collaboration Agreement Template",
+          "Software Development Agreement",
+          "Marketing Agreement Template",
+        ],
+      },
+      {
+        id: 4,
+        link: "Scope of Work Templates",
+        sublink: [
+          "Website Development Scope of Work",
+          "Digital Marketing Scope of Work",
+          "Consultant Statement of Work Template",
+          "Software Development Scope of Work",
+        ],
+      },
+      {
+        id: 5,
+        link: "Quote Templates",
+        sublink: [
+          "Freelance Quotation Template",
+          "Web Design Quotation Template",
+          "Graphic Design Quotation Template",
+          "Interior Design Quotation Template",
+          "Video Production Quotation Template",
+          "Social Media Marketing Quotation",
+        ],
+      },
+      {
+        id: 6,
+        link: "Credit Note Templates",
+        sublink: [],
+      },
+      {
+        id: 7,
+        link: "Estimate Templates",
+        sublink: [],
+      },
+      {
+        id: 8,
+        link: "Form Templates",
+        sublink: [],
+      },
+    ],
+  },
+  bonsai: {
+    title: "Bonsai",
+    links: [
+      {
+        id: 0,
+        link: "About",
+        sublink: [],
+      },
+      {
+        id: 1,
+        link: "Careers",
+        sublink: [],
+      },
+      {
+        id: 2,
+        link: "Support",
+        sublink: [],
+      },
+      {
+        id: 3,
+        link: "LinkedIn",
+        sublink: [],
+      },
+      {
+        id: 4,
+        link: "Twitter",
+        sublink: [],
+      },
+      {
+        id: 5,
+        link: "Privacy Policy",
+        sublink: [],
+      },
+      {
+        id: 6,
+        link: "Legal",
+        sublink: [],
+      },
+      {
+        id: 7,
+        link: "Affilates",
+        sublink: [],
+      },
+      {
+        id: 8,
+        link: "Write for Us",
+        sublink: [],
+      },
+      {
+        id: 9,
+        link: "Comparisons",
+        sublink: [
+          "Freshbooks Alternatives",
+          "Quickbooks Alternatives",
+          "Wave vs Quickbooks",
+          "Xero vs Quickbooks",
+          "Freshbooks vs Quickbooks",
+        ],
+      },
+    ],
+  },
 };
