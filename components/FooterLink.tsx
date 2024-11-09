@@ -24,7 +24,7 @@ const FooterLink = ({ link, sublink }: { link: string; sublink: string[] }) => {
         } transition-all ml-2 flex flex-col overflow-hidden`}
       >
         {sublink.length > 0 &&
-          sublink.map((link) => <li className="text-textColor py-2">{link}</li>)}
+          sublink.map((link) => <li key={link} className="text-textColor py-2">{link}</li>)}
       </ul>
     </li>
   );

@@ -7,12 +7,13 @@ import {
   PlanPricing,
 } from "@/components";
 import { footerContent } from "@/constants";
+import { StateContext } from "@/provider/StateContext";
 
 import React from "react";
 
 const page = () => {
   return (
-    <>
+    <StateContext>
       <Navbar />
       <main className="w-full h-full angled-background">
         <PlanPricing />
@@ -55,7 +56,7 @@ const page = () => {
           </div>
         </div>
       </footer>
-    </>
+    </StateContext>
   );
 };
 

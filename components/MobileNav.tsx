@@ -33,7 +33,7 @@ const MobileNav = () => {
             : "invisible opacity-0"
         }  absolute top-0 left-0 w-screen h-screen bg-whiteBackground lg:hidden z-50`}
       >
-        <div className="w-full h-full flex flex-col gap-32 px-12 py-8 ">
+        <div className="w-full h-full flex flex-col gap-32 px-3 md:px-12 py-8 ">
           {/****** Mobile overlay navigation nav bar******/}
           <div className="w-full flex justify-between">
             <div className="flex w-1/2 justify-start items-center">

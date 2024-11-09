@@ -14,6 +14,7 @@ const ProductBoard = () => {
       className={`${
         isShowContainer ? "w-[980px]" : "w-[350px]"
       } h-[500px]  hidden group-hover:flex absolute top-6 -left-20 bg-white`}
+      onMouseLeave={() => setIsShowContainer(false)}
     >
       {/** Hover Card first Col Container */}
       <div
@@ -50,7 +51,7 @@ const ProductBoard = () => {
               } -rotate-90`}
             />
           </div>
-          <hr className="w-full mt-4 "/>
+          <hr className="w-full mt-4 " />
         </div>
         {/** Second Product */}
         {productCardContent.map(({ id, title, description }) => (
